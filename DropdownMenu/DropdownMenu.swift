@@ -56,7 +56,7 @@ public class DropdownMenu: UIView {
 
     private struct Color {
         static let orangeColor = UIColor.orangeColor()
-        static let purpleColor = UIColor(rgba: "#442849")
+        static let purpleColor = UIColor(red:0.267, green:0.157, blue:0.286, alpha:1)
         static let transparentBlack = UIColor.blackColor().colorWithAlphaComponent(0.1)
     }
     
@@ -76,7 +76,8 @@ public class DropdownMenu: UIView {
     private var contentController: UIViewController?
     private var menuContentTableView: UITableView?
 
-    
+    private var textFont: UIFont?
+
     public enum State {
         case Shown
         case Closed
@@ -85,7 +86,6 @@ public class DropdownMenu: UIView {
     
     public var textColor: UIColor?
     public var menuBackgroundColor: UIColor?
-    public var textFont: UIFont?
     public var enabled: Bool = true
 
     public var items: [DropdownMenuItem] = []
@@ -663,7 +663,7 @@ extension UIViewController{
     func addDropdownMenuNavigationBarButton(){
        
         let imageMenu = UIImage(contentsOfFile: NSBundle(forClass: DropdownMenu.self).pathForResource("ham", ofType: "png")!)
-        let icon = UIBarButtonItem(image: imageMenu, style: .Plain, target: navigationController, action: #selector(NavigationController.showMenu))
+        let icon = UIBarButtonItem(image: imageMenu, style: .Plain, target: navigationController, action: #selector(self.show))
         icon.tintColor = UIColor.orangeColor()
         navigationItem.leftBarButtonItem = icon
     }
