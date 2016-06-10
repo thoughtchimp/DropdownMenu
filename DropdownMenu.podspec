@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DropdownMenu/*'
+  s.source_files = 'DropdownMenu/*.swift'
   s.resources = 'DropdownMenu/*.png'
    
 end
