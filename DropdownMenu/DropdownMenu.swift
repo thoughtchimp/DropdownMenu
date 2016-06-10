@@ -15,9 +15,7 @@ import UIKit
 
 public class DropdownMenu: UIView {
 
-    
     private var isExtraMenuVisible = false
-    
     private var lable1: UILabel!
     private var lable2: UILabel!
     private var lable3: UILabel!
@@ -142,7 +140,6 @@ public class DropdownMenu: UIView {
         self.menuContentTableView!.hidden = true
         
         menuContentTableView?.registerClass(MenuTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-//        menuContentTableView?.registerNib(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         menuView.addSubview(menuContentTableView!)
         
 
@@ -239,14 +236,13 @@ public class DropdownMenu: UIView {
     //MARK: Orientation Change
     func orientationChanged()
     {
-        
         if isExtraMenuVisible {
             let containerHeight  = screenHeight
             let newHeight = menuViewExtraHeight>containerHeight ? containerHeight : menuViewExtraHeight
             var newFrame = self.menuView.frame
             newFrame.size.height = newHeight
             self.menuView.frame = newFrame
-//            menuHeightConstraint?.constant = newHeight
+//          menuHeightConstraint?.constant = newHeight
             
             let translateY = newHeight-self.menuHeight
             let transform = CGAffineTransformMakeTranslation(0, translateY)
@@ -392,7 +388,7 @@ public class DropdownMenu: UIView {
         self.lable2.hidden = false
         self.lable3.hidden = false
         self.lable4.hidden = false
-//          UIView.animateWithDuration(0.5, delay: 0.4, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+
         UIView.animateWithDuration(0.2, delay: 0.5, options: UIViewAnimationOptions.CurveLinear,  animations: {
             self.contentController?.view.transform = CGAffineTransformIdentity
             self.contentController?.view.alpha = 1.0
