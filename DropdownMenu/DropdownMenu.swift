@@ -556,7 +556,7 @@ public class DropdownMenu: UIView {
         }
     }
     
-    class func getBarButtonImage()->UIImage{
+    public class func getBarButtonImage()->UIImage{
         
         return UIImage(contentsOfFile: NSBundle(forClass: DropdownMenu.self).pathForResource("ham", ofType: "png")!)!.imageWithRenderingMode(.AlwaysTemplate)
     }
