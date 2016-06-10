@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
         
         let icon = UIBarButtonItem(image: DropdownMenu.getBarButtonImage(), style: .Plain, target: navigationController, action: #selector(NavigationController.showMenu))
         icon.imageInsets = UIEdgeInsetsMake(-10, 0, 0, 0)
-        icon.tintColor = UIColor.blackColor()
+        icon.tintColor = UIColor.orangeColor()
         navigationItem.leftBarButtonItem = icon
     } 
 }

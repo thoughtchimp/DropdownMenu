@@ -51,7 +51,7 @@ class NavigationController: UINavigationController {
             self.setViewControllers([signoutViewController], animated: false)
         }
 
-        menu = DropdownMenu(item1: item1, item2: item2, item3: item3, item4: item4, otherItems:  [item5,item4,item3,item2,item4,item3,item2,item4,item3,item2], forViewController: self)
+        menu = DropdownMenu(item1: item1, item2: item2, item3: item3, item4: item4, otherItems:  [item5], forViewController: self)
 //        menu?.textColor = UIColor.blackColor()
 //        menu?.menuBackgroundColor = UIColor(rgba: "#ffe400")
     }
