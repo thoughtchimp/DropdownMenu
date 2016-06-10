@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropdownMenu
 
 class NavigationController: UINavigationController {
    
@@ -32,7 +33,7 @@ class NavigationController: UINavigationController {
         let item2 = DropdownMenuItem(title: "History") {
             let historyViewController = storyboard.instantiateViewControllerWithIdentifier("History") as! HistoryViewController
             
-            self.setViewControllers([historyViewController], animated: true)
+            self.setViewControllers([historyViewController], animated: false)
         }
         
         let item3 = DropdownMenuItem(title: "Statistics") {

@@ -1,0 +1,19 @@
+PODS:
+  - DropdownMenu (0.1.0)
+
+DEPENDENCIES:
+  - DropdownMenu (from `https://github.com/thoughtchimp/DropdownMenu.git`)
+
+EXTERNAL SOURCES:
+  DropdownMenu:
+    :git: https://github.com/thoughtchimp/DropdownMenu.git
+
+CHECKOUT OPTIONS:
+  DropdownMenu:
+    :commit: 040436263ab1c831daafe0a0902e91f7505f24df
+    :git: https://github.com/thoughtchimp/DropdownMenu.git
+
+SPEC CHECKSUMS:
+  DropdownMenu: 57fd4aabafaaf5f9d7e15975fd7c0c3f1bef9ea8
+
+COCOAPODS: 0.39.0

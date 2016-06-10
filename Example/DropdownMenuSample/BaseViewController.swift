@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import DropdownMenu
 
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.addDropdownMenuNavigationBarButton()
         
+        let icon = UIBarButtonItem(image: DropdownMenu.getBarButtonImage(), style: .Plain, target: navigationController, action: #selector(NavigationController.showMenu))
+        icon.imageInsets = UIEdgeInsetsMake(-10, 0, 0, 0)
+        icon.tintColor = UIColor.blackColor()
+        navigationItem.leftBarButtonItem = icon
     } 
 }
