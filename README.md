@@ -1,26 +1,42 @@
-pod-template
-============
+DropdownMenu
+====================
+Inspired by [Dribbble shot](https://dribbble.com/shots/2293621-Hamburger-Menu-Animation)
 
-An opinionated template for creating a Pod with the following features:
+##Installation
 
-- Git as the source control management system
-- Clean folder structure
-- Project generation
-- MIT license
-- Testing as a standard
-- Turnkey access to Travis CI
-- Also supports Carthage
+###CocoaPods
 
-## Getting started
+The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
 
-There are two reasons for wanting to work on this template, making your own or improving the one for everyone's. In both cases you will want to work with the ruby classes inside the `setup` folder, and the example base template that it works on from inside `template/ios/`. 
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+# The following is a Library of Swift.
+pod 'DropdownMenu'
+```
 
-## Best practices
+Then, run the following command:
 
-The command `pod lib create` aims to be ran along with this guide: http://guides.cocoapods.org/making/using-pod-lib-create.html so any changes of flow should be updated there also.
+```ruby
+pod install
+```
 
-It is open to communal input, but adding new features, or new ideas are probably better off being discussed in an issue first. In general we try to think if an average Xcode user is going to use this feature or not, if it's unlikely is it a _very strongly_ encouraged best practice ( ala testing / CI. ) If it's something useful for saving a few minutes every deploy, or isn't easily documented in the guide it is likely to be denied in order to keep this project as simple as possible.
+You can set the following property. If you don't set the these property, default value is used.
+68,40,73
 
-## Requirements:
+```Swift
+let menu =  menu = DropdownMenu(item1: item1, item2: item2, item3: item3, item4: item4, otherItems:  [item5,item4,item3,item2,item4,item3,item2,item4,item3,item2], forViewController: self)
 
-- CocoaPods 1.0.0+
+menu.textColor = UIColor.blackColor()                        // Default is UIColor.orangeColor().
+menu.menuBackgroundColor = UIColor.yellowColor()              // Default is UIColor(red:0.267, green:0.157, blue:0.286, alpha:1).
+```
+
+In the rest of the details, refer to DropdownMenuSample project.
+
+## Licence
+
+[MIT](https://github.com/thoughtchimp/DropdownMenu/blob/master/LICENSE)
+
+## Author
+
+[ThoughtChimp](https://github.com/thoughtchimp)
