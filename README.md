@@ -22,7 +22,6 @@ pod install
 ```
 
 You can set the following property. If you don't set the these property, default value is used.
-68,40,73
 
 ```Swift
 let menu =  menu = DropdownMenu(item1: item1, item2: item2, item3: item3, item4: item4, otherItems:  [item5,item4,item3,item2,item4,item3,item2,item4,item3,item2], forViewController: self)
