@@ -555,6 +555,11 @@ public class DropdownMenu: UIView {
             openWithCompletion(completion: nil)
         }
     }
+    
+    class func getBarButtonImage()->UIImage{
+        
+        return UIImage(contentsOfFile: NSBundle(forClass: DropdownMenu.self).pathForResource("ham", ofType: "png")!)?.imageWithRenderingMode(.AlwaysTemplate)
+    }
 }
 
 extension DropdownMenu: UITableViewDataSource, UITableViewDelegate {
@@ -655,16 +660,5 @@ class RoundView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = bounds.size.height/2
-    }
-}
-
-extension UIViewController{
-    
-    func addDropdownMenuNavigationBarButton(){
-       
-        let imageMenu = UIImage(contentsOfFile: NSBundle(forClass: DropdownMenu.self).pathForResource("ham", ofType: "png")!)
-        let icon = UIBarButtonItem(image: imageMenu, style: .Plain, target: navigationController, action: #selector(self.show))
-        icon.tintColor = UIColor.orangeColor()
-        navigationItem.leftBarButtonItem = icon
     }
 }
