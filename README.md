@@ -30,7 +30,7 @@ menu.textColor = UIColor.blackColor()                        // Default is UICol
 menu.menuBackgroundColor = UIColor.yellowColor()              // Default is UIColor(red:0.267, green:0.157, blue:0.286, alpha:1).
 ```
 
-In the rest of the details, refer to DropdownMenuSample project.
+For the rest of the details, refer to DropdownMenuSample project.
 
 ## Licence
 
