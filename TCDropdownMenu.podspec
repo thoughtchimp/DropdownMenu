@@ -1,6 +1,6 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'DropdownMenu'
+  s.name             = 'TCDropdownMenu'
   s.version          = '0.1.1'
   s.summary          = 'A dropdown menu for iOS'
 
