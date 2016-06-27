@@ -12,7 +12,7 @@ The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add
 platform :ios, '8.0'
 use_frameworks!
 # The following is a Library of Swift.
-pod 'DropdownMenu'
+pod 'TCDropdownMenu'
 ```
 
 Then, run the following command:
